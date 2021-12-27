@@ -90,7 +90,7 @@ export default function RegisterScreen({navigation}: Props) {
           </View>
         </View>
         <Button
-          onPress={() => navigation.navigate('HomeScreen')}
+          onPress={() => navigation.navigate('VerifyCodeScreen')}
           title="Sign up"
           titleStyle={styles.textButton}
           containerStyle={styles.containerButton}
