@@ -84,7 +84,7 @@ export default function LoginScreen({navigation}: Props) {
           </View>
 
           <Button
-            onPress={() => navigation.navigate('HomeScreen')}
+            onPress={() => navigation.navigate('RootBottomTab')}
             title="Sign in"
             titleStyle={styles.textButton}
             containerStyle={styles.containerButton}

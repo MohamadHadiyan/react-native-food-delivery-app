@@ -1,3 +1,4 @@
+import {NavigatorScreenParams} from '@react-navigation/native';
 import {ImageSourcePropType} from 'react-native';
 
 export interface Colors {
@@ -76,4 +77,13 @@ export type RootStackParamList = {
   VerifyCodeScreen: undefined;
   FoodScreen: FoodScreenParamType;
   CheckoutOrderScreen: undefined;
+  RootBottomTab: undefined;
+};
+
+export type BottomTabParamList = {
+  HomeScreen: NavigatorScreenParams<RootStackParamList>;
+  FavouriteScreen: undefined;
+  MapScreen: undefined;
+  ProfileScreen: undefined;
+  BookTableScreen: undefined;
 };

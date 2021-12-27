@@ -3,7 +3,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   InitialScreen,
-  HomeScreen,
   LoginScreen,
   RegisterScreen,
   VerifyCodeScreen,
@@ -11,6 +10,7 @@ import {
   CheckoutOrderScreen,
 } from '../screens';
 import {RootStackParamList} from '../constants/TypeScript';
+import RootBottomTab from './RootBottomTab';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -24,7 +24,6 @@ export default function Screens() {
         <RootStack.Screen name="InitialScreen" component={InitialScreen} />
         <RootStack.Screen name="LoginScreen" component={LoginScreen} />
         <RootStack.Screen name="RegisterScreen" component={RegisterScreen} />
-        <RootStack.Screen name="HomeScreen" component={HomeScreen} />
         <RootStack.Screen
           name="VerifyCodeScreen"
           component={VerifyCodeScreen}
@@ -34,6 +33,7 @@ export default function Screens() {
           name="CheckoutOrderScreen"
           component={CheckoutOrderScreen}
         />
+        <RootStack.Screen name="RootBottomTab" component={RootBottomTab} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

@@ -74,7 +74,7 @@ export default function VerifyCodeScreen({navigation}: Props) {
       </View>
 
       <Button
-        onPress={() => navigation.navigate('HomeScreen')}
+        onPress={() => navigation.navigate('RootBottomTab')}
         title="Vrify now"
         titleStyle={styles.textButton}
         containerStyle={styles.containerButton}
