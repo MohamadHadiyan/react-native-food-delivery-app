@@ -8,12 +8,14 @@ import {
   MapScreen,
   ProfileScreen,
 } from '../../screens';
+import AppBottomTabBar from '../../components/AppBottomTabBar';
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function RootBottomTab() {
   return (
     <Tab.Navigator
+      tabBar={props => <AppBottomTabBar {...props} />}
       screenOptions={{
         headerShown: false,
       }}>
