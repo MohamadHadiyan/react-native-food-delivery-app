@@ -7,6 +7,7 @@ import {
   LoginScreen,
   RegisterScreen,
   VerifyCodeScreen,
+  FoodScreen,
 } from '../screens';
 import {RootStackParamList} from '../constants/TypeScript';
 
@@ -27,6 +28,7 @@ export default function Screens() {
           name="VerifyCodeScreen"
           component={VerifyCodeScreen}
         />
+        <RootStack.Screen name="FoodScreen" component={FoodScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

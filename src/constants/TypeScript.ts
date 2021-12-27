@@ -25,14 +25,6 @@ export interface Colors {
   NONE: string;
 }
 
-export type RootStackParamList = {
-  InitialScreen: undefined;
-  HomeScreen: undefined;
-  LoginScreen: undefined;
-  RegisterScreen: undefined;
-  VerifyCodeScreen: undefined;
-};
-
 export interface Food {
   _id: string;
   name: string;
@@ -71,3 +63,16 @@ export interface Restaraunt {
   website: string;
   menu: Food[];
 }
+
+type FoodScreenParamType = {
+  food: Food;
+};
+
+export type RootStackParamList = {
+  InitialScreen: undefined;
+  HomeScreen: undefined;
+  LoginScreen: undefined;
+  RegisterScreen: undefined;
+  VerifyCodeScreen: undefined;
+  FoodScreen: FoodScreenParamType;
+};

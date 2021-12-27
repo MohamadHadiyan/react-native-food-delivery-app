@@ -15,7 +15,7 @@ const foods: Food[] = restaraunts
   .map(item => item.menu)
   .reduce((acc, food) => [...acc, ...food], []);
 
-export default function HomeScreen({}: Props) {
+export default function HomeScreen({navigation}: Props) {
   const styles = useMemo(() => createStyles(), []);
   const [search, setSearch] = useState('');
 
@@ -72,7 +72,7 @@ export default function HomeScreen({}: Props) {
             renderItem={({item, index}) => (
               <FoodCard
                 item={item}
-                onPress={() => console.log('')}
+                onPress={() => navigation.navigate('FoodScreen', {food: item})}
                 index={index}
               />
             )}
@@ -86,7 +86,9 @@ export default function HomeScreen({}: Props) {
               return (
                 <FoodCard
                   item={item}
-                  onPress={() => console.log('')}
+                  onPress={() =>
+                    navigation.navigate('FoodScreen', {food: item})
+                  }
                   index={index}
                 />
               );
