@@ -43,7 +43,7 @@ export default function FoodScreen({navigation, route}: Props) {
             style={headerStyle}
             leftIcon="west"
             leftFunc={() => navigation.goBack()}
-            rightFunc={() => console.log('go')}
+            rightFunc={() => navigation.navigate('CheckoutOrderScreen')}
           />
           <View style={styles.titleBox}>
             <Text style={styles.text}>{food.name}</Text>
@@ -75,7 +75,7 @@ export default function FoodScreen({navigation, route}: Props) {
         </View>
         <View style={styles.buttonBox}>
           <Button
-            onPress={() => console.log('go')}
+            onPress={() => navigation.navigate('CheckoutOrderScreen')}
             title="Checkout order"
             titleStyle={styles.textButton}
             containerStyle={styles.containerButton}

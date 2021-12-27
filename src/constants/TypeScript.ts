@@ -75,4 +75,5 @@ export type RootStackParamList = {
   RegisterScreen: undefined;
   VerifyCodeScreen: undefined;
   FoodScreen: FoodScreenParamType;
+  CheckoutOrderScreen: undefined;
 };

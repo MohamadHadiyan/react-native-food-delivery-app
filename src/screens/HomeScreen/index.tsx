@@ -24,7 +24,7 @@ export default function HomeScreen({navigation}: Props) {
       <AppHeader
         title="No queues"
         leftFunc={() => console.log('')}
-        rightFunc={() => console.log('')}
+        rightFunc={() => navigation.navigate('CheckoutOrderScreen')}
       />
       <ScrollView>
         <View style={styles.searchBox}>
