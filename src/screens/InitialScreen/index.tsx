@@ -4,7 +4,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, Image} from 'react-native-elements';
 import Swiper from 'react-native-swiper';
-import {RootStackParamList} from '../../constants/TypeScript';
+import {AuthStackParamList} from '../../constants/TypeScript';
 import {colors} from '../../constants/colors';
 import createStyles from './styles';
 import {
@@ -15,7 +15,7 @@ import {
   ROASTED_STEAK,
 } from '../../assets/images';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'InitialScreen'>;
+type Props = NativeStackScreenProps<AuthStackParamList, 'InitialScreen'>;
 
 export default function InitialScreen({navigation}: Props) {
   const styles = useMemo(() => createStyles(), []);

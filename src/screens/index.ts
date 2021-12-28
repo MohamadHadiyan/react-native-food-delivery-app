@@ -11,3 +11,6 @@ export {default as FavouriteScreen} from './FavouriteScreen';
 export {default as MapScreen} from './MapScreen';
 export {default as BookTableScreen} from './BookTableScreen';
 export {default as ProfileScreen} from './ProfileScreen';
+
+// Drawer
+export {default as BusinessScreen} from './BusinessScreen';

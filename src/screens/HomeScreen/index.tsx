@@ -1,8 +1,7 @@
 import React, {useMemo, useState} from 'react';
 import {FlatList, ScrollView, View} from 'react-native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Button, Input, Text} from 'react-native-elements';
-import {Food, RootStackParamList} from '../../constants/TypeScript';
+import {Food, HomeScreenNavigationProp} from '../../constants/TypeScript';
 import createStyles from './styles';
 import AppHeader from '../../components/AppHeader';
 import {colors} from '../../constants/colors';
@@ -10,12 +9,14 @@ import {restaraunts} from '../../constants/data';
 import FoodCard from '../../components/FoodCard';
 import RestarauntCard from '../../components/RestarauntCard';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
+// type Props = NativeStackScreenProps<HomeStackParamList, 'BottomTab'>;
+// type Props = DrawerScreenProps<DrawerParamList, "HomeScreen">;
+
 const foods: Food[] = restaraunts
   .map(item => item.menu)
   .reduce((acc, food) => [...acc, ...food], []);
 
-export default function HomeScreen({navigation}: Props) {
+export default function HomeScreen({navigation}: HomeScreenNavigationProp) {
   const styles = useMemo(() => createStyles(), []);
   const [search, setSearch] = useState('');
 
@@ -23,7 +24,8 @@ export default function HomeScreen({navigation}: Props) {
     <View style={styles.body}>
       <AppHeader
         title="No queues"
-        leftFunc={() => console.log('')}
+        leftFunc={() => navigation.openDrawer()}
+        // leftFunc={() => {}}
         rightFunc={() => navigation.navigate('CheckoutOrderScreen')}
       />
       <ScrollView>

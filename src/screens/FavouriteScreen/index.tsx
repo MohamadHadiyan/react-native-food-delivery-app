@@ -1,11 +1,11 @@
 import React, {useMemo} from 'react';
 import {View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../constants/TypeScript';
 import createStyles from './styles';
 import AppHeader from '../../components/AppHeader';
+import {HomeStackParamList} from '../../constants/TypeScript';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'CheckoutOrderScreen'>;
+type Props = NativeStackScreenProps<HomeStackParamList, 'CheckoutOrderScreen'>;
 
 export default function FavouriteScreen({navigation}: Props) {
   const styles = useMemo(() => createStyles(), []);
@@ -16,7 +16,7 @@ export default function FavouriteScreen({navigation}: Props) {
         title="Favourites"
         leftIcon="west"
         leftFunc={() => navigation.goBack()}
-        rightFunc={() => navigation.navigate('HomeScreen')}
+        rightFunc={() => navigation.navigate('BottomTab')}
       />
     </View>
   );

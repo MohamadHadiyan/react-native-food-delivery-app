@@ -1,15 +1,15 @@
 import React, {useMemo, useState} from 'react';
 import {View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../constants/TypeScript';
 import createStyles from './styles';
 import AppHeader from '../../components/AppHeader';
 import {Button, Image, Switch, Text} from 'react-native-elements';
 import {TABLE} from '../../assets/images';
 import {colors} from '../../constants/colors';
 import LinearGradient from 'react-native-linear-gradient';
+import {HomeStackParamList} from '../../constants/TypeScript';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'CheckoutOrderScreen'>;
+type Props = NativeStackScreenProps<HomeStackParamList, 'CheckoutOrderScreen'>;
 const availableTimes = ['5:30 PM', '4:00 PM', '6:30 PM', '8:00 PM'];
 
 export default function BookTableScreen({navigation}: Props) {
@@ -30,7 +30,7 @@ export default function BookTableScreen({navigation}: Props) {
         title="Book table"
         leftIcon="west"
         leftFunc={() => navigation.goBack()}
-        rightFunc={() => navigation.navigate('HomeScreen')}
+        rightFunc={() => navigation.navigate('BottomTab')}
       />
       <View style={styles.imageBox}>
         <Image source={TABLE} style={styles.image} />

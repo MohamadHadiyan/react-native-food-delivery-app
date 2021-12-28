@@ -4,7 +4,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Button, Image, Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import LinearGradient from 'react-native-linear-gradient';
-import {Food, RootStackParamList} from '../../constants/TypeScript';
+import {Food, HomeStackParamList} from '../../constants/TypeScript';
 import createStyles from './styles';
 import AppHeader from '../../components/AppHeader';
 import {restaraunts} from '../../constants/data';
@@ -13,7 +13,7 @@ import {colors} from '../../constants/colors';
 import {Shadow} from 'react-native-shadow-2';
 import Counter from '../../components/Counter';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'FoodScreen'>;
+type Props = NativeStackScreenProps<HomeStackParamList, 'FoodScreen'>;
 const foods: Food[] = restaraunts
   .map(item => item.menu)
   .reduce((acc, food) => [...acc, ...food], []);

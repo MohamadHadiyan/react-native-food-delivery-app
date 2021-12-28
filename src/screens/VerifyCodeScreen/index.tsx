@@ -3,17 +3,17 @@ import {Pressable, View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, Text} from 'react-native-elements';
-import {RootStackParamList} from '../../constants/TypeScript';
-import {colors} from '../../constants/colors';
-import createStyles from './styles';
 import {
   CodeField,
   Cursor,
   useBlurOnFulfill,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
+import {colors} from '../../constants/colors';
+import createStyles from './styles';
+import {AuthStackParamList} from '../../constants/TypeScript';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'VerifyCodeScreen'>;
+type Props = NativeStackScreenProps<AuthStackParamList, 'VerifyCodeScreen'>;
 const CELL_COUNT = 5;
 
 export default function VerifyCodeScreen({navigation}: Props) {
@@ -74,7 +74,7 @@ export default function VerifyCodeScreen({navigation}: Props) {
       </View>
 
       <Button
-        onPress={() => navigation.navigate('RootBottomTab')}
+        onPress={() => navigation.navigate('HomeStack')}
         title="Vrify now"
         titleStyle={styles.textButton}
         containerStyle={styles.containerButton}

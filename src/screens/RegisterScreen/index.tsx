@@ -3,11 +3,11 @@ import {Pressable, View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, Input, Text} from 'react-native-elements';
-import {RootStackParamList} from '../../constants/TypeScript';
+import {AuthStackParamList} from '../../constants/TypeScript';
 import {colors} from '../../constants/colors';
 import createStyles from './styles';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'RegisterScreen'>;
+type Props = NativeStackScreenProps<AuthStackParamList, 'RegisterScreen'>;
 
 export default function RegisterScreen({navigation}: Props) {
   const styles = useMemo(() => createStyles(), []);

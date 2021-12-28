@@ -4,14 +4,14 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Button, Text} from 'react-native-elements';
 import DateTimePicker, {Event} from '@react-native-community/datetimepicker';
 import LinearGradient from 'react-native-linear-gradient';
-import {Food, RootStackParamList} from '../../constants/TypeScript';
+import {Food, HomeStackParamList} from '../../constants/TypeScript';
 import createStyles from './styles';
 import AppHeader from '../../components/AppHeader';
 import {restaraunts} from '../../constants/data';
 import {colors} from '../../constants/colors';
 import OrderFoodCard from '../../components/OrderFoodCard';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'CheckoutOrderScreen'>;
+type Props = NativeStackScreenProps<HomeStackParamList, 'CheckoutOrderScreen'>;
 
 const foods: Food[] = restaraunts
   .map(item => item.menu)
@@ -74,7 +74,7 @@ export default function CheckoutOrderScreen({navigation}: Props) {
               </Text>
             </View>
             <Button
-              onPress={() => navigation.navigate('HomeScreen')}
+              onPress={() => navigation.navigate('BottomTab')}
               title="Checkout"
               titleStyle={styles.textButton}
               buttonStyle={styles.button}

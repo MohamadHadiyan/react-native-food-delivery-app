@@ -1,4 +1,9 @@
-import {NavigatorScreenParams} from '@react-navigation/native';
+import {DrawerScreenProps} from '@react-navigation/drawer';
+import {
+  CompositeScreenProps,
+  NavigatorScreenParams,
+} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {ImageSourcePropType} from 'react-native';
 
 export interface Colors {
@@ -69,21 +74,39 @@ type FoodScreenParamType = {
   food: Food;
 };
 
-export type RootStackParamList = {
+export type AuthStackParamList = {
   InitialScreen: undefined;
-  HomeScreen: undefined;
+  HomeStack: undefined;
   LoginScreen: undefined;
   RegisterScreen: undefined;
   VerifyCodeScreen: undefined;
+};
+
+export type HomeStackParamList = {
+  BottomTab: undefined;
   FoodScreen: FoodScreenParamType;
   CheckoutOrderScreen: undefined;
-  RootBottomTab: undefined;
 };
 
 export type BottomTabParamList = {
-  HomeScreen: NavigatorScreenParams<RootStackParamList>;
+  Drawer: undefined;
   FavouriteScreen: undefined;
   MapScreen: undefined;
   ProfileScreen: undefined;
   BookTableScreen: undefined;
 };
+
+export type DrawerParamList = {
+  HomeScreen: NavigatorScreenParams<HomeStackParamList>;
+  BusinessScreen: undefined;
+  DriverScreen: undefined;
+  PaymentScreen: undefined;
+  Promotions: undefined;
+  SettingScreen: undefined;
+  HelpScreen: undefined;
+};
+
+export type HomeScreenNavigationProp = CompositeScreenProps<
+  DrawerScreenProps<DrawerParamList, 'HomeScreen'>,
+  NativeStackScreenProps<HomeStackParamList>
+>;

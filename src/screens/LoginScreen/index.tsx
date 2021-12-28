@@ -3,12 +3,12 @@ import {Pressable, ScrollView, Switch, View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import LinearGradient from 'react-native-linear-gradient';
 import {Button, Image, Input, Text} from 'react-native-elements';
-import {RootStackParamList} from '../../constants/TypeScript';
+import {AuthStackParamList} from '../../constants/TypeScript';
 import {colors} from '../../constants/colors';
 import createStyles from './styles';
 import {LOGO} from '../../assets/images';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
+type Props = NativeStackScreenProps<AuthStackParamList, 'LoginScreen'>;
 
 export default function LoginScreen({navigation}: Props) {
   const styles = useMemo(() => createStyles(), []);
@@ -84,7 +84,7 @@ export default function LoginScreen({navigation}: Props) {
           </View>
 
           <Button
-            onPress={() => navigation.navigate('RootBottomTab')}
+            onPress={() => navigation.navigate('HomeStack')}
             title="Sign in"
             titleStyle={styles.textButton}
             containerStyle={styles.containerButton}
