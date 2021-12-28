@@ -97,16 +97,16 @@ export type BottomTabParamList = {
 };
 
 export type DrawerParamList = {
-  HomeScreen: NavigatorScreenParams<HomeStackParamList>;
-  BusinessScreen: undefined;
-  DriverScreen: undefined;
-  PaymentScreen: undefined;
+  Home: NavigatorScreenParams<HomeStackParamList>;
+  Business: undefined;
+  Driver: undefined;
+  Payment: undefined;
   Promotions: undefined;
-  SettingScreen: undefined;
-  HelpScreen: undefined;
+  Settings: undefined;
+  Help: undefined;
 };
 
 export type HomeScreenNavigationProp = CompositeScreenProps<
-  DrawerScreenProps<DrawerParamList, 'HomeScreen'>,
+  DrawerScreenProps<DrawerParamList, 'Home'>,
   NativeStackScreenProps<HomeStackParamList>
 >;

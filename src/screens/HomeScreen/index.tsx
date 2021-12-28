@@ -9,9 +9,6 @@ import {restaraunts} from '../../constants/data';
 import FoodCard from '../../components/FoodCard';
 import RestarauntCard from '../../components/RestarauntCard';
 
-// type Props = NativeStackScreenProps<HomeStackParamList, 'BottomTab'>;
-// type Props = DrawerScreenProps<DrawerParamList, "HomeScreen">;
-
 const foods: Food[] = restaraunts
   .map(item => item.menu)
   .reduce((acc, food) => [...acc, ...food], []);
@@ -25,7 +22,6 @@ export default function HomeScreen({navigation}: HomeScreenNavigationProp) {
       <AppHeader
         title="No queues"
         leftFunc={() => navigation.openDrawer()}
-        // leftFunc={() => {}}
         rightFunc={() => navigation.navigate('CheckoutOrderScreen')}
       />
       <ScrollView>
