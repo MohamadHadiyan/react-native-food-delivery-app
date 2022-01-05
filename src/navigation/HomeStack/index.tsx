@@ -1,7 +1,12 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {HomeStackParamList} from '../../constants/TypeScript';
-import {CheckoutOrderScreen, FoodScreen} from '../../screens';
+import {
+  BookTableScreen,
+  CheckoutOrderScreen,
+  FoodScreen,
+  RestarauntScreen,
+} from '../../screens';
 import MainBottomTab from '../BottomTab';
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
@@ -18,6 +23,8 @@ export default function HomeStack() {
         name="CheckoutOrderScreen"
         component={CheckoutOrderScreen}
       />
+      <Stack.Screen name="RestarauntScreen" component={RestarauntScreen} />
+      <Stack.Screen name="BookTableScreen" component={BookTableScreen} />
     </Stack.Navigator>
   );
 }

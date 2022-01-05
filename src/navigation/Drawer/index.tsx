@@ -12,7 +12,7 @@ export default function MainDrawer() {
       drawerContent={props => <AppDrawer {...props} />}
       screenOptions={{
         headerShown: false,
-        swipeEdgeWidth: 100,
+        swipeEdgeWidth: 50,
       }}>
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Business" component={BusinessScreen} />
