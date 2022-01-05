@@ -31,18 +31,23 @@ export interface Colors {
   NONE: string;
 }
 
+export interface FoodCategory {
+  _id: string;
+  name: string;
+}
+
 export interface Food {
   _id: string;
   name: string;
-  type: string;
   price: string;
   images: ImageSourcePropType[];
-  category: string;
+  category: FoodCategory;
   compositions: string[];
   desc: string;
   rating: number;
   calories: number;
   weight: number;
+  createdAt: string;
 }
 
 export interface Restaraunt {
@@ -62,6 +67,7 @@ export interface Restaraunt {
   managerName: string;
   chef: string;
   visitThisMonth: number;
+  story: string;
   reviews: string[];
   images: string[];
   tags: string[];
@@ -72,6 +78,10 @@ export interface Restaraunt {
 
 type FoodScreenParamType = {
   food: Food;
+};
+
+type RestarauntScreenParamType = {
+  restaraunt: Restaraunt;
 };
 
 export type AuthStackParamList = {
@@ -85,7 +95,9 @@ export type AuthStackParamList = {
 export type HomeStackParamList = {
   BottomTab: undefined;
   FoodScreen: FoodScreenParamType;
+  RestarauntScreen: RestarauntScreenParamType;
   CheckoutOrderScreen: undefined;
+  BookTableScreen: undefined;
 };
 
 export type BottomTabParamList = {
@@ -93,7 +105,6 @@ export type BottomTabParamList = {
   FavouriteScreen: undefined;
   MapScreen: undefined;
   ProfileScreen: undefined;
-  BookTableScreen: undefined;
 };
 
 export type DrawerParamList = {

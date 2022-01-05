@@ -1,4 +1,5 @@
-import {Restaraunt} from './TypeScript';
+import {FoodCategory, Restaraunt} from './TypeScript';
+
 const FOOD1 = require('../assets/images/foods/1.png');
 const FOOD2 = require('../assets/images/foods/2.png');
 const FOOD3 = require('../assets/images/foods/3.png');
@@ -11,6 +12,41 @@ const FOOD9 = require('../assets/images/foods/9.png');
 const FOOD10 = require('../assets/images/foods/10.png');
 const FOOD11 = require('../assets/images/foods/11.png');
 const FOOD12 = require('../assets/images/foods/12.png');
+
+export const categories: FoodCategory[] = [
+  {
+    _id: '0',
+    name: 'food',
+  },
+  {
+    _id: '1',
+    name: 'pizza',
+  },
+  {
+    _id: '2',
+    name: 'pasta',
+  },
+  {
+    _id: '3',
+    name: 'meat',
+  },
+  {
+    _id: '4',
+    name: 'fish',
+  },
+  {
+    _id: '5',
+    name: 'Burger',
+  },
+  {
+    _id: '6',
+    name: 'chicken',
+  },
+  {
+    _id: '7',
+    name: 'salad',
+  },
+];
 
 export const restaraunts: Restaraunt[] = [
   {
@@ -25,14 +61,18 @@ export const restaraunts: Restaraunt[] = [
     distance: 5,
     isOpen: true,
     verified: true,
-    slogan: '',
+    slogan: 'mexican restarunt delivers to you',
     workHours: {from: '9', to: '12'},
     managerName: 'avare mind',
     chef: 'solor batch',
     visitThisMonth: 414,
-    reviews: [],
+    reviews: ['best restaraunt'],
+    story:
+      'Saepe soluta laborum dolores, repellat rerum hic numquam mollitia possimus inventore dignissimos, temporibus laboriosam alias, iste voluptatum sunt consequuntur exercitationem dolorum aliquam.',
     images: [
       'https://i.pinimg.com/564x/d7/34/5e/d7345ed26dc802630e40e01c5f36cc14.jpg',
+      'https://i.pinimg.com/564x/1c/48/56/1c48562fe15c9e5dd4206e5a667ebe7a.jpg',
+      'https://i.pinimg.com/564x/7c/ae/bf/7caebf45e49a355202b45c903e407538.jpg',
     ],
     tags: ['Chicken', 'Bowls'],
     socials: [],
@@ -41,10 +81,9 @@ export const restaraunts: Restaraunt[] = [
       {
         _id: '0',
         name: 'Chicken and Cauliflower “Rice” Bowls',
-        type: 'food',
         price: '24',
         images: [FOOD7],
-        category: 'food',
+        category: categories[0],
         calories: 80,
         weight: 400,
         compositions: [
@@ -56,14 +95,15 @@ export const restaraunts: Restaraunt[] = [
         ],
         desc: 'Gluten freeChicken and Cauliflower “Rice” Bowls',
         rating: 4,
+        createdAt: '2021/12/14',
       },
       {
         _id: '1',
         name: 'Chicken Fajita Kebabs - Cooking Classy',
         price: '32',
-        type: 'food',
         images: [FOOD1, FOOD4],
-        category: 'food',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: "Chicken pieces are soaked in a bright, citrusy, well season marinade then threaded onto skewers along with fresh bell peppers and onions. Then they're grilled over hot flames to give them that fire…",
         rating: 4,
@@ -74,9 +114,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '2',
         name: 'chees chilly fried',
         price: '29',
-        type: 'food',
         images: [FOOD6],
-        category: 'food',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: "citrusy, well season marinade then threaded onto skewers along with fresh bell peppers and onions. Then they're grilled over hot flames to give them that fire…",
         rating: 4,
@@ -109,15 +149,17 @@ export const restaraunts: Restaraunt[] = [
     ],
     tags: [],
     socials: [],
+    story:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta laborum dolores, repellat rerum hic numquam mollitia possimus inventore dignissimos, temporibus laboriosam alias, iste voluptatum sunt consequuntur exercitationem dolorum aliquam.',
     website: '',
     menu: [
       {
         _id: '0',
         name: 'Flat lay with italian pizza containing pizza, flat, and lay',
         price: '12',
-        type: 'food',
         images: [FOOD2],
-        category: 'pizza',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: 'Share feedback, ask a question or give a high five',
         rating: 4,
@@ -128,9 +170,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '1',
         name: 'Pizza Background Material',
         price: '10',
-        type: 'food',
         images: [FOOD3],
-        category: 'pizza',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: 'More than 3 million PNG and graphics resource at Pngtree. Find the best inspiration you need for your project.',
         rating: 4,
@@ -157,6 +199,7 @@ export const restaraunts: Restaraunt[] = [
     chef: 'solor batch',
 
     visitThisMonth: 414,
+    story: '',
     reviews: [],
     images: [
       'https://i.pinimg.com/564x/56/8e/d4/568ed475b58947ad8e10f80f6c83b1c9.jpg',
@@ -170,9 +213,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '0',
         name: 'torky caffee',
         price: '5',
-        type: 'drink',
         images: [FOOD10, FOOD12],
-        category: 'caffee',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: '',
         rating: 4,
@@ -183,9 +226,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '1',
         name: 'bitter caffee',
         price: '6',
-        type: 'drink',
         images: [FOOD11],
-        category: 'caffee',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: [],
         desc: '',
         rating: 4,
@@ -211,6 +254,8 @@ export const restaraunts: Restaraunt[] = [
     managerName: 'avare mind',
     chef: 'solor batch',
     visitThisMonth: 414,
+    story:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe soluta laborum dolores, repellat rerum hic numquam mollitia possimus inventore dignissimos, temporibus laboriosam alias, iste voluptatum sunt consequuntur exercitationem dolorum aliquam.',
     reviews: [],
     images: [
       'https://i.pinimg.com/564x/08/6a/e9/086ae9bd5dde14da91fa477706420a52.jpg',
@@ -223,9 +268,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '0',
         name: 'Cast Iron Pizza',
         price: '10',
-        type: 'food',
         images: [FOOD9],
-        category: 'pizza',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: ['olives', 'Meat'],
         desc: 'This cast iron pizza with spicy Italian sausage is prepared with an easy, no-knead pizza dough and is a scrumptious offering for pizza night!',
         rating: 4,
@@ -236,9 +281,9 @@ export const restaraunts: Restaraunt[] = [
         _id: '0',
         name: 'BBQ Chicken Pizza',
         price: '8',
-        type: 'food',
         images: [FOOD8, FOOD5],
-        category: 'pizza',
+        createdAt: '2021/12/14',
+        category: categories[0],
         compositions: ['Chicken Meat', ' fresh leaves'],
         desc: "Cheesy BBQ Chicken Pizza recipe - Slathered with BBQ sauce and sprinkled with tons of mozzarella and gouda, you'll want to make this pizza again and again!",
         rating: 4,
