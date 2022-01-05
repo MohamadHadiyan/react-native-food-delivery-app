@@ -1,10 +1,14 @@
+// Auth Stack
 export {default as InitialScreen} from './InitialScreen';
 export {default as LoginScreen} from './LoginScreen';
 export {default as RegisterScreen} from './RegisterScreen';
 export {default as HomeScreen} from './HomeScreen';
 export {default as VerifyCodeScreen} from './VerifyCodeScreen';
+
+// Home Stack
 export {default as FoodScreen} from './FoodScreen';
 export {default as CheckoutOrderScreen} from './CheckoutOrderScreen';
+export {default as RestarauntScreen} from './RestarauntScreen';
 
 // Bottom Tab
 export {default as FavouriteScreen} from './FavouriteScreen';

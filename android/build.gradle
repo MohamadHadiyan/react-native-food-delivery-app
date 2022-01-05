@@ -33,7 +33,6 @@ allprojects {
         }
 
         google()
-        jcenter() // community/blur
         maven { url 'https://www.jitpack.io' }
     }
 }

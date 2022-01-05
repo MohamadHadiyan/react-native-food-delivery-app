@@ -56,7 +56,13 @@ export default function HomeScreen({navigation}: HomeScreenNavigationProp) {
               <RestarauntCard
                 item={item}
                 index={index}
-                onPress={() => console.log('go')}
+                showTags
+                showRating
+                onPress={() =>
+                  navigation.navigate('RestarauntScreen', {
+                    restaraunt: item,
+                  })
+                }
               />
             )}
           />
