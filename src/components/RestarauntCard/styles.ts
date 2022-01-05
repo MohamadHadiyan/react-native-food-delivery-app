@@ -38,9 +38,15 @@ const createStyles = () =>
       fontSize: RFValue(14),
       color: colors.GREY_3,
     },
+    logoBox: {
+      flexDirection: 'row',
+      alignItems: 'flex-end',
+      marginBottom: 3,
+    },
     title: {
       color: colors.WHITE,
       fontSize: RFValue(18),
+      marginLeft: 10,
       marginBottom: 0,
       fontWeight: '600',
       textAlign: 'left',
@@ -57,6 +63,26 @@ const createStyles = () =>
     },
     flexRow: {
       flexDirection: 'row',
+    },
+    rightContent: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    verifiedBox: {
+      position: 'absolute',
+      backgroundColor: colors.WHITE,
+      width: 28,
+      height: 28,
+      top: 5,
+      right: 5,
+      borderRadius: 15,
+    },
+    verifiedIcon: {
+      position: 'absolute',
+      top: -5,
+      left: -3,
+      right: 0,
+      bottom: 0,
     },
   });
 
