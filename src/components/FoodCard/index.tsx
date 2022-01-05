@@ -9,8 +9,9 @@ interface IProps {
   item: Food;
   index: number;
   onPress: () => void;
+  horizontal?: boolean;
 }
-export default function FoodCard({item, index, onPress}: IProps) {
+export default function FoodCard({item, index, onPress, horizontal}: IProps) {
   const styles = useMemo(() => createStyles(), []);
 
   const marginLeft = {
@@ -19,7 +20,7 @@ export default function FoodCard({item, index, onPress}: IProps) {
 
   return (
     <Card
-      containerStyle={[styles.cardContainer, marginLeft]}
+      containerStyle={[styles.cardContainer, horizontal && marginLeft]}
       wrapperStyle={styles.cardWraper}>
       <TouchableOpacity onPress={onPress}>
         <View style={styles.imageContainer}>
