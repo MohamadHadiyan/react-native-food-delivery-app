@@ -1,5 +1,5 @@
-import React, {useMemo, useState} from 'react';
-import {Dimensions, FlatList, ScrollView, View} from 'react-native';
+import React, {useEffect, useMemo, useState} from 'react';
+import {Dimensions, FlatList, ScrollView, StatusBar, View} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Button, Image, Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -29,6 +29,13 @@ export default function FoodScreen({navigation, route}: Props) {
     width,
     backgroundColor: 'transparent',
   };
+
+  useEffect(() => {
+    return navigation.addListener('focus', () => {
+      StatusBar.setBackgroundColor(colors.NONE);
+      StatusBar.setBarStyle('light-content');
+    });
+  }, [navigation]);
 
   return (
     <View style={styles.body}>
