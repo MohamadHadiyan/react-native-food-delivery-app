@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import {RFValue} from 'react-native-responsive-fontsize';
 import {colors} from '../../constants/colors';
 
 const createStyles = () =>
@@ -16,8 +15,6 @@ const createStyles = () =>
     title: {
       flex: 1,
       paddingTop: 3,
-      fontSize: RFValue(20),
-      color: colors.WHITE,
       textAlign: 'center',
     },
     iconButtonBox: {

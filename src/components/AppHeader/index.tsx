@@ -1,9 +1,10 @@
 import React, {useMemo} from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Badge, Button, Header, Text} from 'react-native-elements';
+import {Badge, Button, Header} from 'react-native-elements';
 import createStyles from './styles';
 import {colors} from '../../constants/colors';
+import Typography from '../Typography';
 
 type LeftIconType = 'menu' | 'west';
 interface IProps {
@@ -31,7 +32,7 @@ export default function AppHeader({
       leftComponent={<LeftComponent icon={leftIcon} onPress={leftFunc} />}
       centerComponent={
         <View style={styles.centerBox}>
-          <Text style={styles.title}>{title}</Text>
+          <Typography text={title} size={20} style={styles.title} />
         </View>
       }
       rightComponent={<RightComponent onPress={rightFunc} badge={badge} />}
