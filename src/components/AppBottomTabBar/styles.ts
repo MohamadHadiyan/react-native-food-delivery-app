@@ -2,12 +2,6 @@ import {StyleSheet} from 'react-native';
 
 const createStyles = () =>
   StyleSheet.create({
-    container: {
-      width: '100%',
-      height: 60,
-      position: 'absolute',
-      bottom: 0,
-    },
     size: {
       height: 60,
       width: '100%',

@@ -8,8 +8,8 @@ import {colors} from '../../constants/colors';
 type LeftIconType = 'menu' | 'west';
 interface IProps {
   leftIcon?: LeftIconType;
-  leftFunc: () => void;
-  rightFunc: () => void;
+  leftFunc?: () => void;
+  rightFunc?: () => void;
   title?: string;
   badge?: string;
   style?: StyleProp<ViewStyle>;
@@ -41,7 +41,7 @@ export default function AppHeader({
 
 interface LeftProps {
   icon: LeftIconType;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 const LeftComponent = ({icon, onPress}: LeftProps) => {
@@ -65,7 +65,7 @@ const LeftComponent = ({icon, onPress}: LeftProps) => {
 };
 
 interface RightProps {
-  onPress: () => void;
+  onPress?: () => void;
   badge?: string;
 }
 const RightComponent = ({onPress, badge}: RightProps) => {

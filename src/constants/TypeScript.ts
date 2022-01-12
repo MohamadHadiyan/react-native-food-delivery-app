@@ -1,3 +1,4 @@
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 import {DrawerScreenProps} from '@react-navigation/drawer';
 import {
   CompositeScreenProps,
@@ -105,6 +106,7 @@ export type BottomTabParamList = {
   FavouriteScreen: undefined;
   MapScreen: undefined;
   ProfileScreen: undefined;
+  SearchScreen: undefined;
 };
 
 export type DrawerParamList = {
@@ -119,5 +121,10 @@ export type DrawerParamList = {
 
 export type HomeScreenNavigationProp = CompositeScreenProps<
   DrawerScreenProps<DrawerParamList, 'Home'>,
+  NativeStackScreenProps<HomeStackParamList>
+>;
+
+export type SearchScreenNavigationProp = CompositeScreenProps<
+  BottomTabScreenProps<BottomTabParamList, 'SearchScreen'>,
   NativeStackScreenProps<HomeStackParamList>
 >;

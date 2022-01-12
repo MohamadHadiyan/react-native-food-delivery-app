@@ -7,7 +7,6 @@ const createStyles = () =>
     body: {
       flex: 1,
       backgroundColor: colors.DARK,
-      paddingBottom: 60,
     },
     center: {
       justifyContent: 'center',
