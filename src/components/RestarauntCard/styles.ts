@@ -6,9 +6,8 @@ const createStyles = () =>
   StyleSheet.create({
     cardContainer: {
       width: RFValue(290),
-      height: RFValue(210),
       backgroundColor: colors.DARK,
-      marginBottom: 20,
+      marginBottom: 10,
       borderWidth: 0,
       borderRadius: 15,
       shadowColor: colors.BLACK,
@@ -83,6 +82,24 @@ const createStyles = () =>
       left: -3,
       right: 0,
       bottom: 0,
+    },
+    menuBox: {
+      paddingHorizontal: 10,
+      paddingBottom: 10,
+    },
+    foodBox: {
+      flexDirection: 'row',
+      marginLeft: 10,
+    },
+    marginLeft_0: {
+      marginLeft: 0,
+    },
+    foodImage: {
+      borderRadius: 10,
+    },
+    foodTitle: {
+      marginLeft: 10,
+      justifyContent: 'space-around',
     },
   });
 
