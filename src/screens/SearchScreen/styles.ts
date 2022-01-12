@@ -31,7 +31,7 @@ const createStyles = () =>
       width: '100%',
     },
     searchInput: {
-      fontSize: 20,
+      fontSize: RFValue(18),
       fontStyle: 'italic',
       color: colors.WHITE,
       paddingBottom: 2,
@@ -92,7 +92,9 @@ const createStyles = () =>
     },
     categoryText: {
       color: colors.GREY_4,
-      fontSize: 18,
+      fontSize: RFValue(18),
+      textShadowColor: colors.GREY_4,
+      textShadowRadius: 2,
     },
     foodBox: {
       flexDirection: 'row',

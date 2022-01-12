@@ -85,6 +85,10 @@ type RestarauntScreenParamType = {
   restaraunt: Restaraunt;
 };
 
+type SearchResultParamTyp = {
+  category: FoodCategory;
+};
+
 export type AuthStackParamList = {
   InitialScreen: undefined;
   HomeStack: undefined;
@@ -99,6 +103,7 @@ export type HomeStackParamList = {
   RestarauntScreen: RestarauntScreenParamType;
   CheckoutOrderScreen: undefined;
   BookTableScreen: undefined;
+  SearchResultScreen: SearchResultParamTyp;
 };
 
 export type BottomTabParamList = {

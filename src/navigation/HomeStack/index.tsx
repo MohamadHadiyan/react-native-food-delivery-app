@@ -6,6 +6,7 @@ import {
   CheckoutOrderScreen,
   FoodScreen,
   RestarauntScreen,
+  SearchResultScreen,
 } from '../../screens';
 import MainBottomTab from '../BottomTab';
 
@@ -25,6 +26,7 @@ export default function HomeStack() {
       />
       <Stack.Screen name="RestarauntScreen" component={RestarauntScreen} />
       <Stack.Screen name="BookTableScreen" component={BookTableScreen} />
+      <Stack.Screen name="SearchResultScreen" component={SearchResultScreen} />
     </Stack.Navigator>
   );
 }

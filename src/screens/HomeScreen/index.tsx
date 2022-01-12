@@ -54,7 +54,7 @@ export default function HomeScreen({navigation}: HomeScreenNavigationProp) {
             horizontal
             renderItem={({item, index}) => (
               <RestarauntCard
-                item={item}
+                restaraunt={item}
                 index={index}
                 showTags
                 showRating

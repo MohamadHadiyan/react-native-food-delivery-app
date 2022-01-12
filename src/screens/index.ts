@@ -9,6 +9,7 @@ export {default as VerifyCodeScreen} from './VerifyCodeScreen';
 export {default as FoodScreen} from './FoodScreen';
 export {default as CheckoutOrderScreen} from './CheckoutOrderScreen';
 export {default as RestarauntScreen} from './RestarauntScreen';
+export {default as SearchResultScreen} from './SearchResultScreen';
 
 // Bottom Tab
 export {default as FavouriteScreen} from './FavouriteScreen';

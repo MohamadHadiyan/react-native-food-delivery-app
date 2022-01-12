@@ -32,7 +32,11 @@ export default function SearchScreen({navigation}: SearchScreenNavigationProp) {
 
   return (
     <View style={styles.body}>
-      <SearchBox />
+      <SearchBox
+        navigate={category =>
+          navigation.navigate('SearchResultScreen', {category})
+        }
+      />
 
       <ScrollView contentContainerStyle={styles.categoryBox}>
         <TopFoodsAndRests
@@ -95,7 +99,7 @@ const TopFoodsAndRests = ({title, data, navigate}: ITop) => {
   );
 };
 
-const SearchBox = () => {
+const SearchBox = ({navigate}: Pick<ISearchModal, 'navigate'>) => {
   const styles = useMemo(() => createStyles(), []);
   const [vizible, setVizible] = useState(false);
 
@@ -116,17 +120,22 @@ const SearchBox = () => {
           </View>
         </TouchableWithoutFeedback>
       </View>
-      <SearchModal vizible={vizible} setVizible={setVizible} />
+      <SearchModal
+        vizible={vizible}
+        navigate={navigate}
+        setVizible={setVizible}
+      />
     </>
   );
 };
 
 interface ISearchModal {
   vizible: boolean;
+  navigate: (name: FoodCategory) => void;
   setVizible: (vizible: boolean) => void;
 }
 
-const SearchModal = ({vizible, setVizible}: ISearchModal) => {
+const SearchModal = ({vizible, navigate, setVizible}: ISearchModal) => {
   const styles = useMemo(() => createStyles(), []);
   const [search, setSearch] = useState('');
   const [cats, setCats] = useState(categories);
@@ -144,7 +153,9 @@ const SearchModal = ({vizible, setVizible}: ISearchModal) => {
   };
 
   const searchHandler = (category: FoodCategory) => {
-    setSearch(category.name);
+    setVizible(false);
+    setSearch('');
+    navigate(category);
   };
 
   const onShowModal = async () => {
